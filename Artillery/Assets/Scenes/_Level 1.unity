@@ -396,6 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453217690}
   - component: {fileID: 1453217691}
+  - component: {fileID: 1453217692}
   m_Layer: 0
   m_Name: Rastro
   m_TagString: Untagged
@@ -439,7 +440,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 324bdeb35762a414b85c1f040460ecbc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,7 +472,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.2542395
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -522,6 +523,19 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1453217692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453217689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b66578f3d1f947029128aa0b1d0e532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaMinimaEntrePuntos: 0.1
 --- !u!1 &1484824296
 GameObject:
   m_ObjectHideFlags: 0
