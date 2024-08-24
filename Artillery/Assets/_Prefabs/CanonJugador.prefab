@@ -727,3 +727,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BalaPrefab: {fileID: 3394006810052495301, guid: a7e4e1f6689614c32ab8be36c2a5ee5a, type: 3}
+  ParticulasDisparo: {fileID: 8453867982698630174, guid: 19ac7dc87ec464d5b9a0f58e4ef56005, type: 3}

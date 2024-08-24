@@ -8,6 +8,7 @@ public class Canon : MonoBehaviour
 
     [SerializeField] private GameObject BalaPrefab;
     private GameObject puntaCanon;
+    public GameObject ParticulasDisparo;
     private float rotacion;
     private int disparos=0;
 
@@ -37,6 +38,8 @@ public class Canon : MonoBehaviour
             SeguirCamara.objetivo = temp;
             Vector3 direccionDisparo = transform.rotation.eulerAngles;
             direccionDisparo.y = 90 - direccionDisparo.x;
+            Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
+            GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas), transform);
             tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
             Bloqueado = true;
             
