@@ -6,6 +6,10 @@ public class Canon : MonoBehaviour
 {
     public static bool Bloqueado;
 
+    public AudioClip clipDisparo;
+    private GameObject SonidoDisparo;
+    private AudioSource SourceDisparo;
+
     [SerializeField] private GameObject BalaPrefab;
     private GameObject puntaCanon;
     public GameObject ParticulasDisparo;
@@ -16,6 +20,8 @@ public class Canon : MonoBehaviour
     private void Start()
     {
         puntaCanon = transform.Find("PuntaCanon").gameObject;
+        SonidoDisparo = GameObject.Find("SonidoDisparo");
+        SourceDisparo = SonidoDisparo.GetComponent<AudioSource>();
         
     }
 
@@ -41,6 +47,7 @@ public class Canon : MonoBehaviour
             Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
             GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas), transform);
             tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
+            SourceDisparo.Play();
             Bloqueado = true;
             
             
