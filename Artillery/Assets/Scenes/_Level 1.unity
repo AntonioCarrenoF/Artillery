@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SonidoDisparo
       objectReference: {fileID: 0}
+    - target: {fileID: 4052426621450179571, guid: d007ef6d32363485089b06f98128aec4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b90cbb0a79b2241d39863aeb4e6594de, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -194,7 +198,11 @@ PrefabInstance:
     - target: {fileID: 3637494098160518918, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
       propertyPath: BalaPrefab
       value: 
-      objectReference: {fileID: 3394006810052495301, guid: 58ee82fe95f2f4ff2b5bfca56a5d2355, type: 3}
+      objectReference: {fileID: 3394006810052495301, guid: 33ccd88ed3c8f4dad84cba4deea6ff51, type: 3}
+    - target: {fileID: 3637494098160518918, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
+      propertyPath: ParticulasDisparo
+      value: 
+      objectReference: {fileID: 8453867982698630174, guid: 1f0be2a803caa47f795ab62f61fa0d1e, type: 3}
     - target: {fileID: 5280489322974426060, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.400005
