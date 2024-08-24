@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanonJugador
       objectReference: {fileID: 0}
+    - target: {fileID: 3637494098160518918, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
+      propertyPath: BalaPrefab
+      value: 
+      objectReference: {fileID: 3394006810052495301, guid: 58ee82fe95f2f4ff2b5bfca56a5d2355, type: 3}
     - target: {fileID: 5280489322974426060, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.400005
