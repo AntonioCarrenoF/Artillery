@@ -75,6 +75,10 @@ public class Canon : MonoBehaviour
         AdministradorJuego.DisparosPorJuego--;
         SourceDisparo.Play();
         Bloqueado = true;
+        if (AdministradorJuego.DisparosPorJuego<0)
+        {
+            disparar.Disable();
+        }
 
     }
 }
