@@ -22,6 +22,23 @@ public class Canon : MonoBehaviour
     private InputAction modificarFuerza;
     private InputAction disparar;
 
+    private void Awake()
+    {
+        canonControls = new CanonControls();
+    }
+
+    private void OnEnable()
+    {
+        apuntar = canonControls.Canon.Apuntar;
+        modificarFuerza = canonControls.Canon.ModificarFuerza;
+        disparar = canonControls.Canon.Disparar;
+        disparar.Enable();
+        modificarFuerza.Enable();
+        apuntar.Enable();
+        disparar.performed += Disparar;
+    }
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -34,20 +51,17 @@ public class Canon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rotacion += Input.GetAxis("Horizontal") * AdministradorJuego.VelocidadRotacion;
-        if(rotacion<=90 && rotacion >= 0)
+        rotacion += apuntar.ReadValue<float>() * AdministradorJuego.VelocidadRotacion;
+        if (rotacion <= 90 && rotacion >= 0)
         {
             transform.eulerAngles = new Vector3(rotacion, 90, 0.0f);
         }
         if (rotacion > 90) rotacion = 90;
         if (rotacion < 0) rotacion = 0;
 
-        Disparar();
-        
-
     }
 
-    private void Disparar()
+    private void Disparar(InputAction.CallbackContext context)
     {
         disparos++;
         GameObject temp = Instantiate(BalaPrefab, puntaCanon.transform.position, transform.rotation);
@@ -58,6 +72,7 @@ public class Canon : MonoBehaviour
         Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
         GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas), transform);
         tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
+        AdministradorJuego.DisparosPorJuego--;
         SourceDisparo.Play();
         Bloqueado = true;
 
