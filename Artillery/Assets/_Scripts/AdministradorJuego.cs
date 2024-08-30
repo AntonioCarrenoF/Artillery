@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AdministradorJuego : MonoBehaviour
 {
     public static AdministradorJuego SingletonAdministradorJuego;
-    public static int VelocidadBala = 30;
+    public static int VelocidadBala=30;
     public static int DisparosPorJuego = 5;
     public static float VelocidadRotacion = 0.1f;
 
@@ -13,6 +14,7 @@ public class AdministradorJuego : MonoBehaviour
     public GameObject canvasPerder;
     public GameObject menuPerder;
     public GameObject menuGanar;
+    public Slider slider;
 
     private void Awake()
     {
@@ -45,5 +47,10 @@ public class AdministradorJuego : MonoBehaviour
     {
         canvasPerder.SetActive(true);
         menuPerder.SetActive(true);
+    }
+
+    public void CambiarFuerza()
+    {
+        VelocidadBala = (int)slider.value;
     }
 }
