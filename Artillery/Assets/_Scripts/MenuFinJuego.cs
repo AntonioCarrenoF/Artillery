@@ -8,6 +8,7 @@ public class MenuFinJuego : MonoBehaviour
     public void SiguienteNivel()
     {
         var siguienteNivel = SceneManager.GetActiveScene().buildIndex + 1;
+        AdministradorJuego.DisparosPorJuego = 5;
         if (SceneManager.sceneCountInBuildSettings > siguienteNivel)
         {
             SceneManager.LoadScene(siguienteNivel);
@@ -26,5 +27,6 @@ public class MenuFinJuego : MonoBehaviour
     public void ReintentarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AdministradorJuego.DisparosPorJuego = 5;
     }
 }

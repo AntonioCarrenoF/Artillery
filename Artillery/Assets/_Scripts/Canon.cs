@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Canon : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Canon : MonoBehaviour
     public GameObject ParticulasDisparo;
     private float rotacion;
     private int disparos=0;
+    private float fuerza;
+    public Slider slider;
 
     public CanonControls canonControls;
     private InputAction apuntar;
@@ -38,6 +41,13 @@ public class Canon : MonoBehaviour
         disparar.performed += Disparar;
     }
 
+    private void OnDisable()
+    {
+        disparar.Disable();
+        modificarFuerza.Disable();
+        apuntar.Disable();
+    }
+
 
     // Start is called before the first frame update
     private void Start()
@@ -58,6 +68,10 @@ public class Canon : MonoBehaviour
         }
         if (rotacion > 90) rotacion = 90;
         if (rotacion < 0) rotacion = 0;
+
+        //AdministradorJuego.VelocidadBala= (int)modificarFuerza.ReadValue<float>();
+        //slider.value = AdministradorJuego.VelocidadBala;
+
 
     }
 

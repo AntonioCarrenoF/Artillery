@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanonJugador
       objectReference: {fileID: 0}
+    - target: {fileID: 3637494098160518918, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 150308827}
     - target: {fileID: 5280489322974426060, guid: 9c60fe37768de43a8842638490aecdf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.400005
@@ -3730,7 +3734,6 @@ MonoBehaviour:
   canvasPerder: {fileID: 1288033621}
   menuPerder: {fileID: 1454412885}
   menuGanar: {fileID: 1796732840}
-  slider: {fileID: 150308827}
 --- !u!1 &1637808598
 GameObject:
   m_ObjectHideFlags: 0

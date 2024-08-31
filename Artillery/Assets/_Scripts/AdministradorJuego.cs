@@ -14,7 +14,6 @@ public class AdministradorJuego : MonoBehaviour
     public GameObject canvasPerder;
     public GameObject menuPerder;
     public GameObject menuGanar;
-    public Slider slider;
 
     private void Awake()
     {
@@ -49,8 +48,4 @@ public class AdministradorJuego : MonoBehaviour
         menuPerder.SetActive(true);
     }
 
-    public void CambiarFuerza()
-    {
-        VelocidadBala = (int)slider.value;
-    }
 }
