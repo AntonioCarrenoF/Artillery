@@ -39,6 +39,7 @@ public class Canon : MonoBehaviour
         modificarFuerza.Enable();
         apuntar.Enable();
         disparar.performed += Disparar;
+        modificarFuerza.performed += FuerzaDisparo;
     }
 
     private void OnDisable()
@@ -94,5 +95,10 @@ public class Canon : MonoBehaviour
 
         }
 
+    }
+
+    private void FuerzaDisparo(InputAction.CallbackContext context)
+    {
+        AdministradorJuego.VelocidadBala = (int)slider.value;
     }
 }
