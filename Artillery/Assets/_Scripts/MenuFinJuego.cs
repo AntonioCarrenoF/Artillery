@@ -22,6 +22,7 @@ public class MenuFinJuego : MonoBehaviour
     public void CargarMenuPrincipal()
     {
         SceneManager.LoadScene(0);
+        AdministradorJuego.DisparosPorJuego = 5;
     }
 
     public void ReintentarNivel()

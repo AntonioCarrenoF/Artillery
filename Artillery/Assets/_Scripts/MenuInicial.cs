@@ -11,25 +11,21 @@ public class MenuInicial : MonoBehaviour
     public void IniciarJuego()
     {
         SceneManager.LoadScene(1);
-        AdministradorJuego.DisparosPorJuego = 5;
     }
 
     public void SegundoNivel()
     {
         SceneManager.LoadScene(2);
-        AdministradorJuego.DisparosPorJuego = 5;
     }
 
     public void TercerNivel()
     {
         SceneManager.LoadScene(3);
-        AdministradorJuego.DisparosPorJuego = 5;
     }
 
     public void CuartoNivel()
     {
         SceneManager.LoadScene(4);
-        AdministradorJuego.DisparosPorJuego = 5;
     }
 
     public void FinalizarJuego()
