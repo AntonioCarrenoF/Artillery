@@ -47,6 +47,9 @@ public class Canon : MonoBehaviour
         disparar.Disable();
         modificarFuerza.Disable();
         apuntar.Disable();
+
+        disparar.performed -= Disparar;
+        modificarFuerza.performed -= Disparar;
     }
 
 
@@ -69,10 +72,6 @@ public class Canon : MonoBehaviour
         }
         if (rotacion > 90) rotacion = 90;
         if (rotacion < 0) rotacion = 0;
-
-        //AdministradorJuego.VelocidadBala= (int)modificarFuerza.ReadValue<float>();
-        //slider.value = AdministradorJuego.VelocidadBala;
-
 
     }
 
@@ -100,5 +99,7 @@ public class Canon : MonoBehaviour
     private void FuerzaDisparo(InputAction.CallbackContext context)
     {
         AdministradorJuego.VelocidadBala = (int)slider.value;
+        //AdministradorJuego.VelocidadBala += (int)context.ReadValue<float>();
+        //slider.value = AdministradorJuego.VelocidadBala;
     }
 }
